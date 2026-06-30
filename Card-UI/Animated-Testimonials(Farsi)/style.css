@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary-color: #17c0eb;
+    --secondary-color:#7efff5;
+    --text-dark:#0f172a;
+    --text-light:#18dcff;
+    --white:#ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins , sans-serif;
+    background-color: var(--secondary-color);
+}
+
+.main-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.main-container h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.main-container h1{
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.main-container h1::after{
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 5rem;
+    background-color: var(--primary-color);
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.card{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 5rem 2rem 5rem;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    transform: translate(-50% ,-50%);
+    width: 75%;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    aspect-ratio: 1;
+    z-index: -1;
+    transition: 0.5s;
+}
+.card span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--white);
+}
+.card h4{
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    font-weight:600;
+    color:var(--primary-color);
+    transition: 0.3s;
+}
+.card p{
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+.card img{
+    margin-bottom: 1rem;
+    max-width: 100px;
+    border-radius: 100%;
+    border: 2px solid var(--primary-color);
+    transition: 0.3s;
+    object-fit: cover;
+    
+}
+.card h5{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+.card h6{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.card:hover::before{
+    width: 400%;
+}
+
+.card:hover :is(h4,h5){
+    color: var(--white);
+}
+.card:hover :is(p,h6){
+    color: var(--secondary-color);
+}
+.card:hover img{
+    border-color: var(--white);
+}
