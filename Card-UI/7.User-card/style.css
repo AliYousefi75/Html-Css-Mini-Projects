@@ -55,3 +55,35 @@ body{
     border-radius: 50%;
     border: 3px solid #fff;
 }
+.main{
+    text-align: center;
+
+}
+.main h2{
+    color: #333;
+    font-weight: 500;
+}
+.main p{
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.main .socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.main .socials a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+.main .socials a i{
+    color: white;
+}
