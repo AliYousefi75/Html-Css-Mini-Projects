@@ -25,4 +25,34 @@ body{
     align-items: center;
     padding: 24px 48px;
     gap: 20px;
+    background-color: #f9e4e4;
+}
+
+.container .header img{
+    width: 235px;
+    height: 315px;
+    border-radius: 70px;
+}
+
+.container .main h1{
+    font-size: 64px;
+    color: var(--red);
+    text-align: center;
+    font-weight: 900;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.container .main h2{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 900;
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+.container .footer p{
+    font-size: 32px;
+    font-weight: 900;
+    text-align: justify;
+
 }
