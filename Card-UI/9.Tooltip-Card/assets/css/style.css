@@ -130,3 +130,62 @@ img {
   font-size: 1.25rem;
   color: var(--title-color);
 }
+
+card-image {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto 1rem;
+}
+
+.card-status {
+  width: 12px;
+  height: 12px;
+  background-color: var(--second-color);
+  position: absolute;
+  top: .5rem;
+  right: .75rem;
+  border-radius: 50%;
+  border: 2px solid var(--container-color);
+}
+
+.card-data {
+  text-align: center;
+}
+
+.card-name {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+.card-profession {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.card-button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--first-color);
+  font-weight: 500;
+}
+
+.card-button i {
+  font-size: 1.25rem;
+}
+
+/* Scale profile image */
+.card-article:hover .card-profile {
+  transform: scale(.8);
+  opacity: .7;
+}
+
+/* Show tooltip card */
+.card-article:hover .card-tooltip {
+  opacity: 1;
+  pointer-events: initial;
+  bottom: 4rem;
+}
