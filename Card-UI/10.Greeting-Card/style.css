@@ -71,7 +71,11 @@ section {
   background-color: whitesmoke;
   padding: 20px;
   border-radius: 10px;
-  
+  display: none;
+}
+
+section:target{
+    display:block;
 }
 
 section:hover{
