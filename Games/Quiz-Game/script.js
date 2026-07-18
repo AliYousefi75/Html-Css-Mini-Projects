@@ -89,7 +89,6 @@ function startQuiz() {
 }
 
 
-
 function showQuestion() {
   // reset state
   answersDisabled = false;
