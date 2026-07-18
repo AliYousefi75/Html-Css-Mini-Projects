@@ -118,3 +118,40 @@ function showQuestion() {
     answersContainer.appendChild(button);
   });
 }
+
+
+function selectAnswer(event) {
+  // optimization check
+  if (answersDisabled) return;
+
+  answersDisabled = true;
+
+  const selectedButton = event.target;
+  const isCorrect = selectedButton.dataset.correct === "true";
+
+  // Here Array.from() is used to convert the NodeList returned by answersContainer.children into an array, this is because the NodeList is not an array and we need to use the forEach method
+  Array.from(answersContainer.children).forEach((button) => {
+    if (button.dataset.correct === "true") {
+      button.classList.add("correct");
+    } else if (button === selectedButton) {
+      button.classList.add("incorrect");
+    }
+  });
+
+  if (isCorrect) {
+    score++;
+    scoreSpan.textContent = score;
+  }
+
+  setTimeout(() => {
+    currentQuestionIndex++;
+
+    // check if there are more questions or if the quiz is over
+    if (currentQuestionIndex < quizQuestions.length) {
+      showQuestion();
+    } else {
+      showResults();
+    }
+  }, 1000);
+}
+
