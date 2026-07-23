@@ -33,7 +33,9 @@ main{
 .footer a{
     cursor: pointer;
     text-decoration: none;
+    color: rgb(114, 116, 116);
 }
 .footer a i{
-    color: rgb(114, 116, 116);
+    color: inherit;
+
 }
